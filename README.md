@@ -1,5 +1,5 @@
-# ISIAF-DS-20_21
+# ISIAU - Comunicazione Multimediale II - Biennio di Fotografia
 
-### GIT repository for the Design dei Servizi course at ISIA Faenza
+### GIT repository per il corso
 
-#### Fall 2020-2021
+#### Primavera 2020-2021
