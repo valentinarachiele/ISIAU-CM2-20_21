@@ -1,0 +1,47 @@
+/*
+ Theme Name:   Tema bello
+ Theme URI:    
+ Description:  Questo è un tema che serve per imparare a fare i temi di WP
+ Author:       Valentina Rachiele
+ Author URI:   https://ixd.altervista.org
+ Template:     aino-theme
+ Version:      1.0.0
+ License:      GNU General Public License v2 or later
+ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+ Tags:         clean, minimalist, responsive, light, dark
+ Text Domain:  aino-theme
+*/
+
+h2.entry-title {
+	color: rgba(33, 25, 156, 0.5);
+	background: rgb(36,0,10);
+background: linear-gradient(90deg, rgba(36,0,10,1) 0%, rgba(9,121,92,1) 35%, rgba(0,212,255,1) 100%);
+	/*
+	color: violet;
+	opacity: 0.5;
+	*/
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 30px;
+	font-weight: bold;
+	letter-spacing: 3px;
+	font-style: italic;
+	text-transform: uppercase;
+	text-decoration: none;
+	text-align: center; /*left, right*/
+	padding: 10px 40px 50px 5px;
+	margin: 60px;
+	transition: all .5 ease;
+}
+
+h2.entry-title:hover {
+	color: deeppink;
+	text-transform: lowercase;
+	background: rgb(36,22,0);
+	background: linear-gradient(90deg, rgba(36,22,0,1) 0%, rgba(121,100,9,1) 35%, rgba(0,212,255,1) 100%);
+	text-decoration: underline;
+	color: blue;
+}
+
+p {
+	line-height: 2;
+}
