@@ -1,4 +1,4 @@
-//CODICE USATO DURANTE LA LEZIONE DEL 23 MARZO 2021
+//CODICE USATO DURANTE LA LEZIONE 03, 23 MARZO 2021
 
 //da inserire nel file functions.php
 function aggiungi_scripts() {
