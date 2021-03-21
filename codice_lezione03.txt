@@ -47,7 +47,7 @@ body {
 //diventerà
 <div class="site-branding fade-in">
 
-//togliere dal sito Altervista la frase nel footer "Apri un sito e guadagna con Altervista - Disclaimer - Segnala abuso". Nel file style.css
+//togliere dal sito Altervista la frase nel footer "Copyright 2021. Apri un sito e guadagna con Altervista - Disclaimer - Segnala abuso". Nel file style.css
 .av-credit-link {
     visibility: hidden;
     display: none;
