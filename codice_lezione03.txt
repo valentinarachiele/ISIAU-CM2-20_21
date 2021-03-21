@@ -58,3 +58,13 @@ body {
     visibility: hidden; /*non mostrare l'elemento nemmeno agli screen reader*/ 
     display: none; /*non mostrare l'elemento agli occhi di chi vede il sito*/
 }
+
+//costruire una griglia per il layout del sito. Il codice che segue va inserito nei file PHP del tema, riflettendo su che tipo di griglia si vuole costruire e quindi distribuendo il codice di conseguenza
+<div class="row"> <!-- questo è il contenitore generale della colonne -->
+        <div class="col-5"> <!-- questa è una colonna che occupa 5/12 dello spazio -->
+          <!-- qua ci va il contenuto desiderato (HTML e PHP) -->
+        </div>
+        <div class="col-7"> <!-- questa è una colonna che occupa 7/12 dello spazio -->
+          <!-- qua ci va il contenuto desiderato (HTML e PHP) -->
+        </div>
+</div> <!-- chiudo .row -->
