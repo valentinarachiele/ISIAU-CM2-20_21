@@ -52,3 +52,9 @@ body {
     visibility: hidden;
     display: none;
 }
+
+//nascondere un elemento con i CSS
+.nascosto {
+    visibility: hidden; /*non mostrare l'elemento nemmeno agli screen reader*/ 
+    display: none; /*non mostrare l'elemento agli occhi di chi vede il sito*/
+}
