@@ -3,3 +3,8 @@ function aggiungi_scripts() {
   wp_enqueue_style( 'roboto', 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,500;1,100;1,500&display=swap' );
 }
 add_action( 'wp_enqueue_scripts', 'aggiungi_scripts' );
+
+//da inserire nel file style.css2
+body {
+	font-family: 'Roboto', sans-serif; 
+}
