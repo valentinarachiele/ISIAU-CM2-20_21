@@ -46,6 +46,7 @@ body {
 <div class="site-branding">
 //diventerà
 <div class="site-branding fade-in">
+//e in questo modo avremo animato il logo del sito
 
 //togliere dal sito Altervista la frase nel footer "Copyright 2021. Apri un sito e guadagna con Altervista - Disclaimer - Segnala abuso". Nel file style.css
 .av-credit-link {
