@@ -12,7 +12,7 @@ body {
 }
 
 //per richiamare la cartella del tema nel caso di CSS o script che carichiamo lì dentro:
-wp_enqueue_script( 'grid', get_stylesheet_directory_uri() . '/assets/simple-grid.min.css');
+wp_enqueue_style( 'grid', get_stylesheet_directory_uri() . '/assets/simple-grid.min.css');
 
 //esempio di un'animazione CSS: tutto il codice che segue va messo nel file style.css
 .fade-in {
