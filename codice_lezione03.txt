@@ -11,6 +11,9 @@ body {
 	font-family: 'Roboto', sans-serif; 
 }
 
+//per richiamare la cartella del tema nel caso di CSS o script che carichiamo lì dentro:
+wp_enqueue_script( 'script-name', get_template_directory_uri() . '/js/example.js');
+
 //esempio di un'animazione CSS: tutto il codice che segue va messo nel file style.css
 .fade-in {
 	-webkit-animation: fade-in 3s ease-in both;
