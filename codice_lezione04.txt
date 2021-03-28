@@ -1,0 +1,66 @@
+//CODICE USATO DURANTE LA LEZIONE 04, 30 MARZO 2021
+
+//testo a scorrimento o marquee
+//01. da inserire nel file header.php (o in un altro file del tema, dipende da dove si vuole visualizzare il testo a scorrimento)
+<div class="marquee">
+      <p>Ecco il testo a scorrimento, che in gergo si chiama 'marquee'.</p>
+</div>
+
+//02. da inserire nel CSS del tema
+div.marquee {
+/*questa è la striscia contenitore del testo*/
+  background-color:black;
+  color: #fff;
+  padding: 5px;
+}
+.marquee p {
+  /*questo è il paragrafo col testo che deve scorrere e gli stiamo dicendo che è animato (vd. più in basso). Modificando tutte le (3) occorrenze di '10s' si modifica la velocità di scorrimento: aumentando i secondi rallenta, diminuendo i secondi accelera*/
+  -moz-animation: marquee 10s linear infinite;
+  -webkit-animation: marquee 10s linear infinite;
+  animation: marquee 10s linear infinite;
+}
+/*questi sono tutti i frame dell'animazione*/
+@-moz-keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@-webkit-keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes marquee {
+  0% {
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%)
+  }
+  100% {
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+
+/*riga di codice da inserire nel template di pagina all'inizio (al posto delle righe 1-8)*/
+<?php 
+/* Template Name: Pagina diversa */
+
+/*tag condizionali https://developer.wordpress.org/themes/basics/conditional-tags/*/
+<?php if(is_page_template( 'pagina-diversa.php' )) {?>
+   // qualcosa
+<?php }?>
+
+/*tag condizionali con ELSE*/
+<?php if(...) : ?>
+  //qualcosa
+<?php else: ?>
+  //qualcos'altro
+<?php endif ?>
