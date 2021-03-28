@@ -11,6 +11,9 @@ body {
 	font-family: 'Roboto', sans-serif; 
 }
 
+//per richiamare la cartella del tema nel caso di CSS o script da caricare su functions.php:
+wp_enqueue_style( 'grid', get_stylesheet_directory_uri() . '/assets/simple-grid.min.css');
+
 //esempio di un'animazione CSS: tutto il codice che segue va messo nel file style.css
 .fade-in {
 	-webkit-animation: fade-in 3s ease-in both;
