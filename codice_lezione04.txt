@@ -51,7 +51,7 @@ div.marquee {
 
 /*riga di codice da inserire nel template di pagina all'inizio (al posto delle righe 1-8)*/
 <?php 
-/* Template Name: Pagina diversa */
+/* Template Name: Homepage */
 
 /*tag condizionali https://developer.wordpress.org/themes/basics/conditional-tags/*/
 <?php if(is_page_template( 'pagina-diversa.php' )) {?>
