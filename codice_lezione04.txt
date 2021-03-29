@@ -53,6 +53,10 @@ div.marquee {
 <?php 
 /* Template Name: Homepage */
 
+
+/*WP_Query*/
+https://developer.wordpress.org/reference/classes/wp_query/
+
 /*tag condizionali https://developer.wordpress.org/themes/basics/conditional-tags/*/
 <?php if(is_page_template( 'pagina-diversa.php' )) {?>
    // qualcosa
