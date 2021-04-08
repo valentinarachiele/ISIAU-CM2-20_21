@@ -1,0 +1,31 @@
+/*didascalia che compare su immagine gradualmente*/
+/*da inserire nel file style.css del tema figlio*/
+.nofigcaption figcaption {
+  /* display: none; */
+  opacity: 0;
+  transition: opacity .5s ease-out;
+  position: absolute;
+  top: 50%;
+  text-align: center;
+  width: 100%;
+  left: 0;
+  color: white;
+}
+
+figure.nofigcaption:hover figcaption {
+  /* display: block; */
+  opacity: 1;
+}
+
+figure.nofigcaption {
+  background-color: black;
+}
+
+figure.nofigcaption img {
+  opacity: 1;
+  transition: opacity .5s ease-out;
+}
+
+figure.nofigcaption:hover img {
+  opacity: .5;
+}
