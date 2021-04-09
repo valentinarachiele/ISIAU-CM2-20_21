@@ -13,6 +13,8 @@
   color: white;
 }
 
+/*per capire meglio "ease-out" https://www.w3schools.com/cssref/css3_pr_transition-timing-function.asp*/
+
 figure.nofigcaption:hover figcaption {
   /* display: block; */
   opacity: 1;
