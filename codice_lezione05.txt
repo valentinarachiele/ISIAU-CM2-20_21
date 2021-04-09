@@ -1,4 +1,5 @@
 /*didascalia che compare su immagine gradualmente*/
+/*risultato: https://ixd.altervista.org/img-hover/*/
 /*da inserire nel file style.css del tema figlio*/
 .nofigcaption figcaption {
   /* display: none; */
@@ -28,4 +29,106 @@ figure.nofigcaption img {
 
 figure.nofigcaption:hover img {
   opacity: .5;
+}
+
+/*** ---------------------------------------- ***/
+
+/*testo che compare/scompare al click di un pulsante*/
+/*https://www.w3schools.com/jquery/html_toggleclass.asp*/
+/*plugin di WP usato https://it.wordpress.org/plugins/custom-css-js/*/
+/*classe "fade-out" di Animista https://animista.net/play/exits/fade-out*/
+/*da inserire nel file style.css del tema figlio*/
+.fade-out {
+	-webkit-animation: fade-out 1s ease-out both;
+	        animation: fade-out 1s ease-out both;
+}
+
+ @-webkit-keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/*da inserire in un nuovo file JS in WordPress*/
+jQuery(document).ready(function( $ ){
+    $("div.hide a").click(function(){
+    	$("p.nascosto").toggleClass('fade-out');
+  	});
+});
+/*per ottenere un fading sia per la comparsa che per la scomparsa*/
+jQuery(document).ready(function( $ ){
+    $("div.hide a").click(function(){
+    	$("p.nascosto").fadeToggle(1000); //al posto di 1000 un'altra cifra oppure nulla
+  	});
+});
+
+/*manipolare il CSS con jQuery https://www.w3schools.com/jquery/jquery_css.asp*/
+
+/*** ---------------------------------------- ***/
+
+/*mostrare/nascondere immagine passando il mouse sopra ad un elemento*/
+/*da inserire in un nuovo file JS in WordPress*/
+jQuery(document).ready(function( $ ){
+  $('.articolo h3').hover(function() {
+    $(this).siblings('a').children('img.wp-post-image').toggleClass('mostra');
+  });
+});
+/*e nel file style.css del tema figlio*/
+img.wp-post-image {
+  opacity: 0;
+  transition: opacity .5s ease-out;
+}
+
+img.wp-post-image.mostra {
+  opacity: 1;
+}
+
+/*** ---------------------------------------- ***/
+
+/*scrollare di sezione in sezione*/
+/*pagina Github di Scrollify https://github.com/lukehaas/Scrollify*/
+/*da inserire in un nuovo file JS in WordPress*/
+jQuery(document).ready(function( $ ){
+    $.scrollify({
+            section : ".section",
+      		offset : -32,
+    });
+});
+
+/*** ---------------------------------------- ***/
+
+/*div con scroll orizzontale https://www.w3schools.com/howto/howto_css_menu_horizontal_scroll.asp*/
+
+/*** ---------------------------------------- ***/
+
+/*menu con ancore a scroll*/
+https://github.com/maasdi/jquery-menu-anchor
+/*da inserire in un nuovo file JS in WordPress*/
+jQuery(document).ready(function( $ ){
+    $('#container').MenuAnchor();
+});
+
+/*e nel file style.css del tema figlio*/
+.anchor-menu {
+  width: 200px;
+  margin: 0;
+  top: 30%;
+  left: 0;
+  box-shadow: none;
+}
+
+.anchor-menu .selected {
+  background: transparent;
+  text-decoration: none;
+  color: lime;
 }
