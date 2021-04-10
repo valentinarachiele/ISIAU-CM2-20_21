@@ -134,3 +134,174 @@ jQuery(document).ready(function( $ ){
   text-decoration: none;
   color: lime;
 }
+
+/*** ---------------------------------------- ***/
+
+/*slick slider di immagini https://kenwheeler.github.io/slick/*/
+/*da inserire in un nuovo blocco HTML in Gutenberg nella pagina o nell'articolo desiderati*/
+<div class="slider">
+  <div><img src="https://ixd.altervista.org/wp-content/uploads/2021/04/monika-grabkowska-TAj4X5-eRqE-unsplash.jpg"></div>
+  <div><img src="https://ixd.altervista.org/wp-content/uploads/2021/04/monika-grabkowska-P1aohbiT-EY-unsplash.jpg"></div>
+  <div><img src="https://ixd.altervista.org/wp-content/uploads/2021/04/joseph-gonzalez-fdlZBWIP0aM-unsplash.jpg"></div>
+</div>
+
+/*da inserire in un nuovo file JS in WordPress*/
+jQuery(document).ready(function( $ ){
+    $('.slider').slick({
+    //setting-name: setting-value
+      arrows: true,
+      dots: false,
+      infinite: true,
+      fade: false,
+      swipe: true,
+      speed: 0,
+      autoplay: false,
+  });
+});
+
+/*e nel file style.css del tema figlio*/
+.slick-prev, .slick-next {
+  width: 20%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 100;
+}
+
+.slick-prev::before, .slick-next::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.slick-prev, .slick-prev:hover {
+  cursor: url('https://ixd.altervista.org/wp-content/uploads/2021/04/arrow_left.png'), auto;
+}
+
+.slick-next, .slick-next:hover {
+  cursor: url('https://ixd.altervista.org/wp-content/uploads/2021/04/arrow_right.png'), auto;
+}
+
+/*** ---------------------------------------- ***/
+
+/*posizionare 4 voci di menu ai 4 angoli della pagina*/
+/*CSS posizionamento assoluto https://www.w3schools.com/css/css_positioning.asp*/
+/*nel CSS del tema figlio*/
+/*attenzione: controllare gli ID delle proprie voci di menu perché saranno diversi dai miei*/
+li#menu-item-129 {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  margin: 0;
+}
+
+li#menu-item-272 {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  margin: 0;
+}
+
+li#menu-item-219 {
+  position: fixed;
+  bottom: 15px;
+  left: 15px;
+  margin: 0;
+}
+
+li#menu-item-220 {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  margin: 0;
+}
+
+ul.primary-menu {
+  width: 100vw; /*viewport width*/
+  height: 100vh; /*viewport height*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+/*** ---------------------------------------- ***/
+
+/*immagine random al caricamento della pagina*/
+
+/*da inserire in un nuovo file JS in WordPress*/
+/*tutorial di partenza https://fredthewebguy.me/tutorials/load-random-images-page-load-jquery/*/
+/*attenzione: modificare gli URL delle immagini*/
+jQuery(document).ready(function( $ ){
+    var image = new Array ();
+	image[0] = "https://ixd.altervista.org/wp-content/uploads/2021/04/monika-grabkowska-TAj4X5-eRqE-unsplash.jpg";
+	image[1] = "https://ixd.altervista.org/wp-content/uploads/2021/04/monika-grabkowska-P1aohbiT-EY-unsplash.jpg";
+	image[2] = "https://ixd.altervista.org/wp-content/uploads/2021/04/joseph-gonzalez-fdlZBWIP0aM-unsplash.jpg";
+	var size = image.length
+	var x = Math.floor(size*Math.random())
+
+	$('#randomImages').attr('src',image[x]);
+});
+
+/*** ---------------------------------------- ***/
+
+/*fullscreen video background*/
+/*da inserire in un nuovo file JS in WordPress*/
+// Get the video
+var video = document.getElementById("myVideo");
+
+// Get the button
+var btn = document.getElementById("myBtn");
+
+// Pause and play the video, and change the button text
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+
+/*da inserire nel CSS del tema figlio*/
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+/* Add some content at the bottom of the video/page */
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Style the button used to pause/play the video */
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}
+
+/*da inserire in un blocco HTML in una nuova pagina con template di pagina "Fullscreen"*/
+/*attenzione: cambiare il link al video!*/
+<video autoplay muted loop id="myVideo">
+  <source src="https://ixd.altervista.org/wp-content/uploads/2021/04/Pexels-Videos-2620.mp4" type="video/mp4">
+</video>
