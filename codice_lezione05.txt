@@ -369,3 +369,74 @@ jQuery(document).ready(function( $ ){
         delay += 700;
     });
 });
+
+/*** ---------------------------------------- ***/
+
+/*sliding navigation*/
+/*da inserire in un nuovo file JS in WordPress*/
+function openClose() {
+  var element = document.getElementById("mySidenav");
+  if (element.style.width == "300px") {
+        element.style.width = "40px";
+    	element.classList.remove("open");
+    } else {
+        element.style.width = "300px";
+      	element.classList.add("open");
+    }
+}
+/*da inserire nel CSS del tema figlio*/
+.sidenav {
+  height: 100%;
+  width: 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  border-right: 1px solid black;
+  z-index: 101;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 41px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 31px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+span.slidingnav {
+  position: absolute;
+  left: 5px;
+  top: 49%;
+  z-index: 101;
+  transition: 0.5s;
+}
+
+.open + span.slidingnav {
+  left: 250px;
+}
+/*da inserire in header.php del tema figlio*/
+<div id="mySidenav" class="sidenav">
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+<span class="slidingnav" style="font-size:30px;cursor:pointer" onclick="openClose()">&#9776;</span>
+
