@@ -452,3 +452,25 @@ span.slidingnav {
 
 /*costruire griglie complesse per articoli e pagine*/
 /*plugin utilizzati: https://it.wordpress.org/plugins/grids/ oppure https://it.wordpress.org/plugins/aino-blocks/*/ 
+
+/*** ---------------------------------------- ***/
+
+/*registrare e usare una nuova area widget*/
+/*https://developer.wordpress.org/themes/functionality/sidebars/*/
+/*nel file functions.php del tema figlio*/
+add_action( 'widgets_init', 'aino_child_widgets_init' );
+function aino_child_widgets_init() {
+  register_sidebar( array(
+      'name'          => __( 'Spalla sinistra', 'aino' ),
+      'id'            => 'spallasx',
+      'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+      'after_widget'  => '</aside>',
+      'before_title'  => '<h3 class="widget-title">',
+      'after_title'   => '</h3>',
+  ) );
+}
+
+/*nel file PHP del tema figlio dove si vuole visualizzare l'area*/
+<div id="sidebar-primary" class="sidebar">
+    <?php dynamic_sidebar( 'spallasx' ); ?>
+</div>
