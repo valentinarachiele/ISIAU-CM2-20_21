@@ -305,3 +305,54 @@ function myFunction() {
 <video autoplay muted loop id="myVideo">
   <source src="https://ixd.altervista.org/wp-content/uploads/2021/04/Pexels-Videos-2620.mp4" type="video/mp4">
 </video>
+
+/*** ---------------------------------------- ***/
+
+/*pdf embed viewer*/
+/*plugin utilizzato: https://it.wordpress.org/plugins/pdf-embedder/*/
+
+/*da inserire nel CSS del tema figlio. Attenzione: cambiare gli URL alle immagini dei pulsanti!*/
+div.pdfemb-viewer {
+  border: 0 !important;
+}
+
+.entry-content > div.pdfemb-viewer, .pdfemb-pagescontainer {
+  width: 100% !important;
+  max-width: none;
+  margin: 0 auto;
+  background-color: lime !important;
+}
+
+div.pdfemb-toolbar {
+  background-color: white !important;
+}
+
+div.pdfemb-toolbar button, div.pdfemb-toolbar button[disabled] {
+  border: 0 !important;
+  background-color: white !important;
+  border-radius: 0 !important;
+  box-shadow: 0 !important;
+  background-image: none !important;
+}
+
+div.pdfemb-toolbar button.pdfemb-prev::before {
+  content: url('https://ixd.altervista.org/wp-content/uploads/2021/04/left.png') !important;
+}
+
+div.pdfemb-toolbar button.pdfemb-next::before {
+  content: url('https://ixd.altervista.org/wp-content/uploads/2021/04/right.png') !important;
+}
+
+div.pdfemb-toolbar button.pdfemb-zoomout::before {
+  content: url('https://ixd.altervista.org/wp-content/uploads/2021/04/minus.png') !important;
+}
+
+div.pdfemb-toolbar button.pdfemb-zoomin::before {
+    content: url('https://ixd.altervista.org/wp-content/uploads/2021/04/plus.png') !important;
+}
+
+/*** ---------------------------------------- ***/
+
+/*finestre modali/lightbox per immagini*/
+/*plugin utilizzato per il lightbox di immagini: https://wordpress.org/plugins/responsive-lightbox/*/
+/*plugin da provare per le finestre modali con altri contenuti: https://wordpress.org/plugins/popup-maker/ oppure https://wordpress.org/plugins/popup-builder/*/
