@@ -440,3 +440,15 @@ span.slidingnav {
 </div>
 <span class="slidingnav" style="font-size:30px;cursor:pointer" onclick="openClose()">&#9776;</span>
 
+/*** ---------------------------------------- ***/
+
+/*per allargare l'area dei contenuti negli articoli*/
+/*da inserire nel CSS del tema figlio*/
+.entry-content > div.wp-block-columns, .entry-content > div.grids-section {
+  max-width: none;
+}
+
+/*** ---------------------------------------- ***/
+
+/*costruire griglie complesse per articoli e pagine*/
+/*plugin utilizzati: https://it.wordpress.org/plugins/grids/ oppure https://it.wordpress.org/plugins/aino-blocks/*/ 
