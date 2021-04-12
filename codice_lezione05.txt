@@ -356,3 +356,16 @@ div.pdfemb-toolbar button.pdfemb-zoomin::before {
 /*finestre modali/lightbox per immagini*/
 /*plugin utilizzato per il lightbox di immagini: https://wordpress.org/plugins/responsive-lightbox/*/
 /*plugin da provare per le finestre modali con altri contenuti: https://wordpress.org/plugins/popup-maker/ oppure https://wordpress.org/plugins/popup-builder/*/
+
+/*** ---------------------------------------- ***/
+
+/*far apparire degli elementi uno per uno con il fading*/
+/*da inserire in un nuovo file JS in WordPress*/
+/*attenzione: cambiare l'elemento a cui si vuole applicare l'effetto (h2.entry-title)*/
+jQuery(document).ready(function( $ ){
+    var delay = 700; //ritardo nella comparsa di ogni elemento
+    $('h2.entry-title').each(function(){
+        $(this).hide().delay(delay).fadeIn(1000);
+        delay += 700;
+    });
+});
